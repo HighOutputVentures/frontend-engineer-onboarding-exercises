@@ -34,6 +34,7 @@
     "@chakra-ui/react": "^1.6.9",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@heroicons/react": "^1.0.4",
     "axios": "^0.22.0",
     "framer-motion": "^4.1.17",
     "graphql": "^15.6.1",
