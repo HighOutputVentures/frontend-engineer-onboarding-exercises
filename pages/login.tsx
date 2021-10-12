@@ -7,7 +7,9 @@ const Login: FC = () => (
   <SignupLayout>
     <Box w="full">
       <Box mb="8">
-        <Heading as="h1">Login page</Heading>
+        <Heading as="h1" mb={4}>
+          Login page
+        </Heading>
         <Text>Some description about this login page.</Text>
       </Box>
       {/* <LoginForm /> */}

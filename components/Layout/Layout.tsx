@@ -38,7 +38,7 @@ const Layout: FC<LayoutProps> = ({ children, title }) => {
             icon={<Icon fontSize={16} as={LogoutIcon} />}
             onClick={() => setIsCollpased((v) => !v)}
           />
-          <Heading as="h1" fontSize="2xl" mb={0}>
+          <Heading as="h2" fontSize="xl" mb={0}>
             {title}
           </Heading>
         </Flex>
