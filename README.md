@@ -17,6 +17,10 @@ Added path aliasing **(@folder-name)** is used to easily determine which files w
 
 Running **graphql-codegen** requires you to add **.env** file with `API_URL`'s value as your graphql endpoint. After doing so, you can do `npm run codegen` which will auto generate the typescript definitions for you.
 
+## Environment variables
+
+You must provide **NEXT_PUBLIC_API_URL** environment variable that points to remote graphql server to run the application properly.
+
 ## We use this tools
 
 - [ESLint](https://eslint.org/docs/user-guide/configuring/)
