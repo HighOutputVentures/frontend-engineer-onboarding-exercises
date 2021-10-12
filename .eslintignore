@@ -1,1 +1,6 @@
-*.js
+**/node_modules/*
+
+#types
+/types/index.ts
+next.config.js
+schemaQuery.js
