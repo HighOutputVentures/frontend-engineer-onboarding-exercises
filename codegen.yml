@@ -1,7 +1,6 @@
-schema:
-  - ${API_URL:http://api-site-staging.zenithpanel.com/graphql}
+schema: ${NEXT_PUBLIC_API_URL}
 generates:
-  ./types/types.d.ts:
+  ./types/index.ts:
     plugins:
       - typescript
       - typescript-operations
