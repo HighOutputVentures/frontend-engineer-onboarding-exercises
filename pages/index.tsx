@@ -1,14 +1,24 @@
-import { Flex } from '@chakra-ui/react'
-import Layout from '@components/Layout'
+import { Flex, Spinner } from '@chakra-ui/react'
 import NextImage from 'next/image'
-import { FC } from 'react'
+import { FC, Suspense, lazy } from 'react'
+
+// import Layout from '@components/Layout'
+const Layout = lazy(() => import('@components/Layout'))
 
 const Home: FC = () => (
-  <Layout title="Welcome to HOV">
-    <Flex p={8} alignItems="center" justifyContent="center">
-      <NextImage src="/logo.png" width={200} height={200} />
-    </Flex>
-  </Layout>
+  <Suspense
+    fallback={
+      <Flex h="100vh" w="full" justifyContent="center" alignItems="center">
+        <Spinner />
+      </Flex>
+    }
+  >
+    <Layout title="Welcome to HOV">
+      <Flex p={8} alignItems="center" justifyContent="center">
+        <NextImage src="/logo.png" width={200} height={200} />
+      </Flex>
+    </Layout>
+  </Suspense>
 )
 
 export default Home
