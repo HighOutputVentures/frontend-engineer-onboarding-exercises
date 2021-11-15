@@ -2,7 +2,6 @@ import { Flex, Spinner } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import { FC, Suspense, lazy } from 'react'
 
-// import Layout from '@components/Layout'
 const Layout = lazy(() => import('@components/Layout'))
 
 const Home: FC = () => (

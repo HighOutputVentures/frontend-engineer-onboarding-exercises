@@ -49,7 +49,7 @@ export const withAuthSync = <T extends WithAuthSync>(WrappedComponent: FC<T> & N
     }
 
     useEffect(() => {
-      window.addEventListener('storage', (e) => e.key)
+      window.addEventListener('storage', syncLogout)
 
       return () => {
         window.removeEventListener('storage', syncLogout)
@@ -73,9 +73,9 @@ export const withAuthSync = <T extends WithAuthSync>(WrappedComponent: FC<T> & N
       }
     }
 
-    const componentProps = WrappedComponent.getInitialProps && (await WrappedComponent.getInitialProps(ctx))
+    const wrappedComponentProps = WrappedComponent.getInitialProps && (await WrappedComponent.getInitialProps(ctx))
 
-    return { ...componentProps, token }
+    return { ...wrappedComponentProps, token }
   }
 
   return Wrapper
