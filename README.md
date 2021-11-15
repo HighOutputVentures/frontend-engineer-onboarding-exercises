@@ -2,12 +2,17 @@
 
 The top level directory structure will be as follows:
 
-- assets - global static assets such as images, svgs, company logo, etc.
-- components - global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
+- components - Global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
+- graphql - Ggraphql related files and configurations
+- hooks - Custom react-hooks used within the application, also where queries and mutations be found (they are all written as react-hook).
+- icons - Application icons, should all be imported on index.ts
 - modules - JavaScript modules (all components under specific page should go here, e.g. **modules/dashboard/component.tsx** will contain components rendered in **pages/dashboard.tsx**)
-- store - Global Redux store
-- utils - Utilities & helper functions and the like
 - pages - NextJS page files
+- public - Static files (images, logo, local js files)
+- store - Global Redux/Zustand store
+- theme - Centralized styling of all component / ui elements
+- types - Contains auto generated typescript definition for all api queries & mutations
+- utils - Utilities & helper functions used within the app
 
 ## Path aliasing
 
