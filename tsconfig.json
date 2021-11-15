@@ -7,7 +7,7 @@
       "@components/*": ["components/*"],
       "@modules/*": ["modules/*"],
       "@store/*": ["store/*"],
-      "@styles/*": ["styles/*"],
+      "@theme/*": ["theme/*"],
       "@utils/*": ["utils/*"],
       "@icons/*": ["icons/*"],
       "@hooks/*": ["hooks/*"]
