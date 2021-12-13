@@ -5,12 +5,12 @@ import { Account } from 'types'
 
 const useAccountQuery = () => {
   const { data, refetch, loading } = useQuery<{ account: Account }>(ACCOUNT, {
-    skip: !isBrowser
+    skip: !isBrowser,
   })
   return {
     account: data?.account,
     refetchAccount: refetch,
-    loadingAccount: loading
+    loadingAccount: loading,
   }
 }
 

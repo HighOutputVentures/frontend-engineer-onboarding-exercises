@@ -33,4 +33,14 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+# next
+next-env.d.ts
+
+# husky
+.husky
+
+# buildinfo
 tsconfig.tsbuildinfo
+CHANGELOG.md

@@ -2,17 +2,20 @@
 
 The top level directory structure will be as follows:
 
-- components - Global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
-- graphql - Ggraphql related files and configurations
-- hooks - Custom react-hooks used within the application, also where queries and mutations be found (they are all written as react-hook).
-- icons - Application icons, should all be imported on index.ts
+- assets - global static assets such as images, svgs, company logo, etc.
+- components - global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
 - modules - JavaScript modules (all components under specific page should go here, e.g. **modules/dashboard/component.tsx** will contain components rendered in **pages/dashboard.tsx**)
+- store - Global Redux store
+- utils - Utilities & helper functions and the like
 - pages - NextJS page files
-- public - Static files (images, logo, local js files)
-- store - Global Redux/Zustand store
-- theme - Centralized styling of all component / ui elements
-- types - Contains auto generated typescript definition for all api queries & mutations
-- utils - Utilities & helper functions used within the app
+- graphql - Apollo/GraphQL files can be found
+
+## Naming convensions
+
+- `.ts` - utility functions or config files will be follow `camelCase.ts`
+- `.tsx` - files that holds react components
+  - `page` - if it's a page file, it should follow `kebab-case.tsx`
+  - `component` - if it's a component/module, should follow `PascalCase.tsx`
 
 ## Path aliasing
 
@@ -20,11 +23,14 @@ Added path aliasing **(@folder-name)** is used to easily determine which files w
 
 ## Graphql codegen
 
-Running **graphql-codegen** requires you to add **.env** file with `API_URL`'s value as your graphql endpoint. After doing so, you can do `npm run codegen` which will auto generate the typescript definitions for you.
+Running **graphql-codegen** requires you to add **.env** file with `NEXT_PUBLIC_API_URL`'s value as your graphql endpoint. After doing so, you can do `npm run codegen` which will auto generate the typescript definitions for you.
 
-## Environment variables
+## Setting up husky, lint-staged and commitizen
 
-You must provide **NEXT_PUBLIC_API_URL** environment variable that points to remote graphql server to run the application properly.
+- **husky** is already included under dev dependencies just `npm install` and `.husky` directory will be generated for you.
+- **lint-staged** has to be manually setup in order to avoid unexpected behavior when running the script (see `.husky/pre-commit`)
+
+We use **commitizen** to organize commits and standardize it's structure, this approach is intended as we have a goal to automate changelogs in the future. Instead of using the typical `git commit` you will have to use `npm run cz`.
 
 ## We use this tools
 
@@ -34,5 +40,8 @@ You must provide **NEXT_PUBLIC_API_URL** environment variable that points to rem
 - [Lint Staged](https://github.com/okonet/lint-staged)
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 - [graphql-codegen](https://www.graphql-code-generator.com/)
+- [commitizen](https://github.com/commitizen/cz-cli)
 
 ### [Structure reference](https://www.taniarascia.com/react-architecture-directory-structure)
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)

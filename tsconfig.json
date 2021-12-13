@@ -3,10 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "@graphql/*": ["graphql/*"],
+      "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@modules/*": ["modules/*"],
       "@store/*": ["store/*"],
-      "@theme/*": ["theme/*"],
+      "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@icons/*": ["icons/*"],
       "@hooks/*": ["hooks/*"]
