@@ -1,5 +1,4 @@
-import { createStandaloneToast } from '@highoutput/ui-components'
-import { UseToastOptions } from '@chakra-ui/toast'
+import { createStandaloneToast, UseToastOptions } from '@highoutput/ui-components'
 
 const { toast } = createStandaloneToast()
 
