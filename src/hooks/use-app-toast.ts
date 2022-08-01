@@ -1,6 +1,5 @@
 import { useRef } from 'react'
-import { useToast } from '@chakra-ui/react'
-import { UseToastOptions } from '@chakra-ui/toast'
+import { useToast, UseToastOptions } from '@highoutput/ui-components'
 
 const useAppToast = () => {
   const toast = useToast()

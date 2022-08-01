@@ -1,7 +1,11 @@
-import { Container, Flex, Grid, GridItem } from '@chakra-ui/react'
-import { FC } from 'react'
+import { Container, Flex, Grid, GridItem } from '@highoutput/ui-components'
+import { FC, ReactNode } from 'react'
 
-const SignupLayout: FC = ({ children }) => (
+interface SignupLayoutProps {
+  children: ReactNode
+}
+
+const SignupLayout: FC<SignupLayoutProps> = ({ children }) => (
   <Grid templateColumns={{ md: 'repeat(5, 1fr)' }} minH="100vh">
     <GridItem colSpan={{ md: 2 }} bg="papayawhip" />
     <GridItem colSpan={{ md: 3 }}>

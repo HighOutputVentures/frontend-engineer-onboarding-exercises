@@ -1,7 +1,6 @@
-import { createStandaloneToast } from '@chakra-ui/react'
-import { UseToastOptions } from '@chakra-ui/toast'
+import { createStandaloneToast, UseToastOptions } from '@highoutput/ui-components'
 
-const toast = createStandaloneToast()
+const { toast } = createStandaloneToast()
 
 export const showToast = (description: string, status: UseToastOptions['status'], duration = 3000) => {
   toast.closeAll()

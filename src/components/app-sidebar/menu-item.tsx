@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Menu, MenuButton, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Icon, Menu, MenuButton, Text, Tooltip } from '@highoutput/ui-components'
 import { useRouter } from 'next/router'
 import { ComponentType, FC } from 'react'
 

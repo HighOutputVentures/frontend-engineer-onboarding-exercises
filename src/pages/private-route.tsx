@@ -1,4 +1,4 @@
-import { Grid } from '@chakra-ui/react'
+import { Grid } from '@highoutput/ui-components'
 import { withAuthSync } from '@utils/auth-utils'
 import { FC } from 'react'
 
