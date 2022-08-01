@@ -1,11 +1,13 @@
-import { Box, Container, Flex, Heading, Icon, IconButton } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Icon, IconButton } from '@highoutput/ui-components'
+import { FC, ReactNode, useState } from 'react'
+import { LogoutIcon } from '@heroicons/react/solid'
+
 import AppSidebar from '@components/app-sidebar'
 import MetaTags from '@components/meta-tags'
-import { LogoutIcon } from '@heroicons/react/solid'
-import { FC, useState } from 'react'
 
 interface LayoutProps {
   title: string
+  children: ReactNode
 }
 
 const Layout: FC<LayoutProps> = ({ children, title }) => {

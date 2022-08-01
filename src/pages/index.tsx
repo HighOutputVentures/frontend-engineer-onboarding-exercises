@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Flex } from '@chakra-ui/react'
+import { Flex } from '@highoutput/ui-components'
 import NextImage from 'next/image'
 
 import Layout from '@components/layout'

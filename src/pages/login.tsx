@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@highoutput/ui-components'
 import { SignupLayout } from '@components/layout'
 import { FC } from 'react'
 
